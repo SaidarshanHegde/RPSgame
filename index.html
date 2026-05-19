@@ -1,10 +1,222 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Rock Paper Scissor</title>
-    </head>
-    <body>
-        <h2>Rock Paper Scissor<h2>
-        <script src="script.js"></script>
-    </body>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>Rock Paper Scissors</title>
+
+  <!-- CSS LINK -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;700&display=swap"
+    rel="stylesheet"
+  >
+
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header class="header">
+
+    <h1 class="title">
+      ROCK PAPER SCISSORS
+    </h1>
+
+  </header>
+
+  <!-- MAIN -->
+
+  <main class="main">
+
+    <!-- TOP MESSAGE -->
+
+    <div class="top-section">
+
+      <h2 class="score-info" id="scoreInfo">
+        Enter number of rounds and click Start Game
+      </h2>
+
+      <p class="score-message" id="scoreMessage">
+        Ready to play?
+      </p>
+
+    </div>
+
+    <!-- ROUND INPUT -->
+
+    <div class="round-section">
+
+      <label
+        for="roundInput"
+        class="round-label"
+      >
+        Number of rounds :
+      </label>
+
+      <input
+        type="number"
+        id="roundInput"
+        placeholder="Enter rounds"
+        min="1"
+      />
+
+    </div>
+
+    <!-- CONTROL BUTTONS -->
+
+    <div class="control-buttons">
+
+      <button
+        class="btn settings-btn"
+        id="startBtn"
+      >
+        Start Game
+      </button>
+
+      <button
+        class="btn reset-btn"
+        id="resetBtn"
+      >
+        Restart
+      </button>
+
+    </div>
+
+    <!-- WEAPON TITLE -->
+
+    <h2 class="weapon-title">
+      Choose your weapon
+    </h2>
+
+    <!-- WEAPON BUTTONS -->
+
+    <div class="buttons">
+
+      <button
+        class="btn btn-square"
+        id="rockBtn"
+      >
+        ✊
+      </button>
+
+      <button
+        class="btn btn-square"
+        id="paperBtn"
+      >
+        ✋
+      </button>
+
+      <button
+        class="btn btn-square"
+        id="scissorsBtn"
+      >
+        ✌
+      </button>
+
+    </div>
+
+    <!-- SCORES -->
+
+    <div class="scores-container">
+
+      <!-- PLAYER -->
+
+      <div class="score-box">
+
+       <h3>Player</h3>
+
+       <div
+        class="sign"
+        id="playerSign"
+       >
+       ❔
+       </div>
+
+       <p
+        class="score"
+        id="playerScore"
+       >
+       0
+       </p>
+
+      </div>
+
+      <!-- COMPUTER -->
+
+      <div class="score-box">
+
+       <h3>Computer</h3>
+
+       <div
+        class="sign"
+        id="computerSign"
+       >
+       ❔
+       </div>
+
+       <p
+       class="score"
+       id="computerScore"
+       >
+       0
+       </p>
+
+      </div>
+
+    </div>
+
+  </main>
+
+
+  <!-- MODAL -->
+
+  <div
+    class="modal"
+    id="endgameModal"
+  >
+
+    <p
+      class="modal-title"
+      id="endgameMsg"
+    >
+    </p>
+
+    <button
+      class="btn-restart"
+      id="restartBtn"
+    >
+      Play Again
+    </button>
+
+  </div>
+
+  <!-- OVERLAY -->
+
+  <div
+    class="overlay"
+    id="overlay"
+  >
+  </div>
+
+  <!-- JS LINK -->
+
+  <script src="script.js"></script>
+
+</body>
+
 </html>

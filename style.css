@@ -1,0 +1,455 @@
+
+
+:root {
+
+  --bg1: #0f172a;
+  --bg2: #1e1b4b;
+  --bg3: #312e81;
+
+  --yellow: #facc15;
+
+  --blue: #38bdf8;
+
+  --pink: #ec4899;
+
+  --white: #ffffff;
+}
+
+* {
+
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+body {
+
+  min-height: 100vh;
+
+  font-family: "Roboto", sans-serif;
+
+  color: white;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--bg1),
+      var(--bg2),
+      var(--bg3)
+    );
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+}
+
+/* HEADER */
+
+.header {
+
+  padding: 35px 20px;
+}
+
+.title {
+
+  font-size: 36px;
+
+  color: var(--yellow);
+
+  font-family:
+    "Press Start 2P",
+    cursive;
+
+  text-align: center;
+}
+
+/* MAIN */
+
+.main {
+
+  width: 100%;
+
+  max-width: 900px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 25px;
+
+  padding: 20px;
+}
+
+/* TOP */
+
+.score-info {
+
+  font-size: 30px;
+
+  text-align: center;
+}
+
+.score-message {
+
+  margin-top: 10px;
+
+  font-size: 20px;
+
+  text-align: center;
+}
+
+/* INPUT */
+
+.round-section {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  flex-wrap: wrap;
+}
+
+.round-label {
+
+  font-size: 22px;
+
+  font-weight: bold;
+}
+
+#roundInput {
+
+  width: 220px;
+
+  padding: 12px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  font-size: 16px;
+
+  outline: none;
+}
+
+/* BUTTONS */
+
+.control-buttons {
+
+  display: flex;
+
+  gap: 20px;
+}
+
+.btn {
+
+  border: none;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.settings-btn {
+
+  padding: 14px 24px;
+
+  border-radius: 14px;
+
+  color: white;
+
+  font-size: 17px;
+
+  font-weight: bold;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--blue),
+      #2563eb
+    );
+}
+
+.reset-btn {
+
+  padding: 14px 24px;
+
+  border-radius: 14px;
+
+  color: white;
+
+  font-size: 17px;
+
+  font-weight: bold;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--pink),
+      #9333ea
+    );
+}
+
+.settings-btn:hover,
+.reset-btn:hover {
+
+  transform:
+    translateY(-4px)
+    scale(1.05);
+}
+
+/* WEAPON */
+
+.weapon-title {
+
+  font-size: 34px;
+}
+
+.buttons {
+
+  display: flex;
+
+  gap: 35px;
+
+  flex-wrap: wrap;
+
+  justify-content: center;
+}
+
+.btn-square {
+
+  width: 150px;
+
+  height: 150px;
+
+  border-radius: 25px;
+
+  font-size: 70px;
+
+  background:
+    rgba(255,255,255,0.1);
+
+  color: white;
+
+  backdrop-filter: blur(10px);
+
+  box-shadow:
+    0 8px 25px rgba(0,0,0,0.3);
+}
+
+.btn-square:hover {
+
+  transform:
+    translateY(-10px)
+    scale(1.08);
+
+  background:
+    rgba(255,255,255,0.2);
+}
+
+/* SCORES */
+
+.scores-container {
+
+  width: 100%;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 80px;
+
+  margin-top: 30px;
+
+  flex-wrap: wrap;
+}
+
+.score-box {
+
+  width: 220px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 25px;
+
+  border-radius: 20px;
+
+  text-align: center;
+
+  background:
+    rgba(255,255,255,0.1);
+
+  backdrop-filter: blur(10px);
+
+  box-shadow:
+    0 8px 25px rgba(0,0,0,0.3);
+}
+
+.sign {
+
+  font-size: 70px;
+
+  margin-bottom: 10px;
+}
+
+.score-box h3 {
+
+  font-size: 28px;
+
+  margin-bottom: 15px;
+}
+
+.score {
+
+  font-size: 40px;
+
+  font-weight: bold;
+
+  color: var(--yellow);
+}
+
+/* FOOTER */
+
+.footer {
+
+  margin-top: auto;
+
+  padding: 20px;
+}
+
+/* MODAL */
+
+.modal {
+
+  position: fixed;
+
+  top: 50%;
+  left: 50%;
+
+  transform:
+    translate(-50%, -50%)
+    scale(0);
+
+  width: 350px;
+
+  padding: 40px;
+
+  border-radius: 25px;
+
+  background: #1e293b;
+
+  text-align: center;
+
+  z-index: 1000;
+
+  transition: 0.3s;
+}
+
+.modal.active {
+
+  transform:
+    translate(-50%, -50%)
+    scale(1);
+}
+
+.modal-title {
+
+  font-size: 35px;
+
+  margin-bottom: 25px;
+}
+
+.btn-restart {
+
+  padding: 14px 24px;
+
+  border-radius: 14px;
+
+  border: none;
+
+  color: white;
+
+  font-size: 18px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--pink),
+      #9333ea
+    );
+}
+
+/* OVERLAY */
+
+.overlay {
+
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background:
+    rgba(0,0,0,0.7);
+
+  display: none;
+}
+
+.overlay.active {
+
+  display: block;
+}
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+
+  .title {
+
+    font-size: 22px;
+  }
+
+  .score-info {
+
+    font-size: 22px;
+  }
+
+  .weapon-title {
+
+    font-size: 26px;
+  }
+
+  .btn-square {
+
+    width: 110px;
+    height: 110px;
+
+    font-size: 50px;
+  }
+
+
+  .score-box {
+
+    width: 220px;
+  }
+}
